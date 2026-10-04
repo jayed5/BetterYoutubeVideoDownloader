@@ -77,6 +77,7 @@ python bridge/bridge.py
 |---|---|
 | **Chrome / Edge** | `chrome://extensions` → *Developer mode* → *Load unpacked* → select `extension/chrome/` |
 | **Firefox** | `about:addons` → ⚙ gear icon → *Install Add-on From File…* → select [`extension/firefox/youtube-yt-dlp-firefox-mv2-6.0.0.xpi`](extension/firefox/youtube-yt-dlp-firefox-mv2-6.0.0.xpi) — a signed build installs permanently, like any regular add-on |
+| **Userscript** | Install [`userscript/youtube-yt-dlp-downloader.user.js`](userscript/youtube-yt-dlp-downloader.user.js) in Tampermonkey/Violentmonkey |
 
 <details>
 <summary>Signing your own build of the Firefox add-on</summary>
@@ -84,7 +85,6 @@ python bridge/bridge.py
 Firefox only installs add-ons permanently when they are signed. To sign your own build: package the contents of `extension/firefox/` as a zip, submit it on [addons.mozilla.org](https://addons.mozilla.org/developers/) (Developer Hub → *Submit a New Add-on* → choose **unlisted**) and download the signed `.xpi`. Install it as described above. For quick development without signing you can still load it temporarily via `about:debugging`, but that expires on restart.
 
 </details>
-| **Userscript** | Install [`userscript/youtube-yt-dlp-downloader.user.js`](userscript/youtube-yt-dlp-downloader.user.js) in Tampermonkey/Violentmonkey |
 
 ### 3 — Download something
 
