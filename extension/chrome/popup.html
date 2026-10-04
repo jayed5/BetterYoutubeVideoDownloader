@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      width: 280px;
+      margin: 0;
+      padding: 14px;
+      font: 13px "Segoe UI", Roboto, Arial, sans-serif;
+      background: #fff;
+      color: #0f0f0f;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1f1f1f; color: #f1f1f1; }
+      .seg button { background: #333; color: #f1f1f1; }
+      .seg button.active { background: #f1f1f1; color: #0f0f0f; }
+    }
+    h1 { font-size: 14px; margin: 0 0 12px; }
+    .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+    .seg { display: flex; border-radius: 8px; overflow: hidden; }
+    .seg button {
+      border: 0; padding: 6px 12px; font: 500 12px inherit; cursor: pointer;
+      background: #f2f2f2; color: #0f0f0f;
+    }
+    .seg button.active { background: #0f0f0f; color: #fff; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; background: #b3b3b3; }
+    .dot.ok { background: #2ecc40; }
+    .dot.bad { background: #ff4136; }
+    .detail { font-size: 11px; opacity: .75; line-height: 1.5; word-break: break-all; }
+    .hint { margin-top: 10px; font-size: 11px; opacity: .7; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <h1>YouTube yt-dlp Downloader</h1>
+
+  <div class="row">
+    <span data-i18n="language">Language</span>
+    <div class="seg">
+      <button id="lang-en" type="button">English</button>
+      <button id="lang-pl" type="button">Polski</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <span data-i18n="bridge">Bridge</span>
+    <span><span class="dot" id="dot"></span><span id="bridge-text" data-i18n="checking">Checking…</span></span>
+  </div>
+
+  <div class="detail" id="detail"></div>
+  <div class="hint" id="hint"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

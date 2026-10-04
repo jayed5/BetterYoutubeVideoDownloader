@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube yt-dlp Downloader",
+  "version": "6.0.0",
+  "description": "Adds a Download button on YouTube (watch, Shorts, Live) and downloads the video through a local yt-dlp bridge. English/Polish UI.",
+  "permissions": [
+    "storage",
+    "http://127.0.0.1:8765/*",
+    "https://www.youtube.com/*",
+    "https://m.youtube.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "browser_action": {
+    "default_title": "YouTube yt-dlp Downloader",
+    "default_popup": "popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-ytdlp@local",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}
