@@ -20,8 +20,6 @@
 
 ## ✨ Features
 
-|  |  |
-|---|---|
 | ⬇ **One-click download** | Button injected next to the like/dislike row on watch pages, Shorts and Live streams |
 | ⚡ **Instant UI** | Downloads run in the background on the bridge — the button never blocks or times out |
 | 🌐 **EN / PL interface** | Switch anytime; English is the default. Applies live to open tabs |
